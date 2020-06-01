@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 
 # Parse the version from the fiona module.
-with open('metasay/__init__.py') as f:
+with open('colormap/__init__.py') as f:
     for line in f:
         if line.find("__version__") >= 0:
             version = line.split("=")[1].strip()
@@ -16,7 +16,7 @@ with codecs_open('README.rst', encoding='utf-8') as f:
     long_description = f.read()
 
 
-setup(name='rio-metasay',
+setup(name='rio-colormap',
       version=version,
       description=u"Rasterio CLI plugin example",
       long_description=long_description,
@@ -39,5 +39,5 @@ setup(name='rio-metasay',
       },
       entry_points="""
       [rasterio.rio_commands]
-      metasay=metasay.scripts.cli:metasay
+      colormap=colormap.scripts.cli:colormap
       """)
